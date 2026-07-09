@@ -11,6 +11,12 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
+const BASE_PATH = '/Haseeb-STEM-Portfolio-';
+
+const assetPath = (path: string): string => {
+  return `${BASE_PATH}${path}`;
+};
+
 export interface SkillGroup {
   title: string;
   icon: LucideIcon;
@@ -48,14 +54,14 @@ export const profileLinks = {
   github: 'https://github.com/Syed-Haseeb97',
   linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
   email: 'mailto:haseebbukhari97@gmail.com',
-  resume: '/assets/Haseeb-resume.pdf',
+  resume: assetPath('/assets/Haseeb-resume.pdf'),
 };
 
 export const profileDetails = {
   email: 'haseebbukhari97@gmail.com',
   githubLabel: 'github.com/Syed-Haseeb97',
   linkedinLabel: 'linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
-  portfolioImage: '/assets/portfolio.png',
+  portfolioImage: assetPath('/assets/portfolio.png'),
 };
 
 export const achievements = [
@@ -111,11 +117,11 @@ export const featuredProject = {
   technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Firebase'],
   screenshots: [
     {
-      src: '/assets/gonest-features.png',
+      src: assetPath('/assets/gonest-features.png'),
       alt: 'GoNest feature section showing monthly commute booking, shared ride savings, passenger matching, and safe travel cards',
     },
     {
-      src: '/assets/gonest-savings.png',
+      src: assetPath('/assets/gonest-savings.png'),
       alt: 'GoNest savings calculator section showing commute savings messaging',
     },
   ] satisfies ProjectScreenshot[],
@@ -132,11 +138,11 @@ export const projectPlaceholders: Project[] = [
     imageLabel: 'Task Tracker product screenshots',
     screenshots: [
       {
-        src: '/assets/task-tracker-dashboard.png',
+        src: assetPath('/assets/task-tracker-dashboard.png'),
         alt: 'Task Tracker dashboard showing progress, priority balance, and Google Workspace sign-in',
       },
       {
-        src: '/assets/task-tracker-kanban.png',
+        src: assetPath('/assets/task-tracker-kanban.png'),
         alt: 'Task Tracker Kanban board with To Do, Doing, and Done task columns',
       },
     ],
