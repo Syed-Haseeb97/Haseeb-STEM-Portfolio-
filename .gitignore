@@ -3,8 +3,7 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-# Production build
-dist/
+# Production build (dist is committed for GitHub Pages serving)
 build/
 
 # IDE
