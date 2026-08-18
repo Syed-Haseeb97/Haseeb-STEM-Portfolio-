@@ -105,3 +105,8 @@ tailwind.config.ts
 ## 📄 License
 
 This project is intended for personal portfolio use.
+
+
+## Deployment notes
+
+The portfolio is configured for GitHub Pages. Run `npm run build` locally before publishing changes so broken asset paths or TypeScript errors are caught before deployment.
