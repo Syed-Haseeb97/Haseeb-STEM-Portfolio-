@@ -54,7 +54,7 @@ export const profileLinks = {
   github: 'https://github.com/Syed-Haseeb97',
   linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
   email: 'mailto:haseebbukhari97@gmail.com',
-  resume: assetPath('/assets/Haseeb-resume.pdf'),
+  resume: assetPath('/assets/Haseeb_resume_latest.pdf'),
 };
 
 export const profileDetails = {
