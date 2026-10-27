@@ -115,6 +115,16 @@ export const featuredProject = {
     'Autonomous desktop mode with cursor companion and safety controls',
   ],
   technologies: ['Python', 'PyQt6', 'Gemini API', 'SpeechRecognition', 'Playwright'],
+  screenshots: [
+    {
+      src: assetPath('/assets/ruby-ai-assistant.svg'),
+      alt: 'Ruby AI screen assistant conversation UI with floating liquid orb',
+    },
+    {
+      src: assetPath('/assets/ruby-desktop-mode.svg'),
+      alt: 'Ruby autonomous desktop mode with cursor companion and safety controls',
+    },
+  ] satisfies ProjectScreenshot[],
   githubHref: 'https://github.com/Syed-Haseeb97/ai_agent',
   liveHref: 'https://github.com/Syed-Haseeb97/ai_agent',
 };
@@ -126,6 +136,16 @@ export const projectPlaceholders: Project[] = [
       'Campus-first vehicle rental marketplace connecting student and faculty renters with vehicle owners. Browse by campus zone, list vehicles, manage bookings, and run owner/admin workflows.',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
     imageLabel: 'MOBILITY marketplace',
+    screenshots: [
+      {
+        src: assetPath('/assets/mobility-marketplace.svg'),
+        alt: 'MOBILITY campus vehicle rental marketplace with listings and search',
+      },
+      {
+        src: assetPath('/assets/mobility-host.svg'),
+        alt: 'MOBILITY host dashboard with fleet stats and handover desk',
+      },
+    ],
     githubHref: 'https://github.com/Syed-Haseeb97/mobility_03',
     liveHref: 'https://mobility-03.vercel.app',
   },
