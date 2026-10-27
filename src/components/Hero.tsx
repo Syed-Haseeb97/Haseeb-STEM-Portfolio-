@@ -47,15 +47,15 @@ export function Hero() {
         <div className="rounded-md border border-line bg-gray-50 p-4">
           <div className="mb-4 flex items-center justify-between border-b border-line pb-4">
             <div>
-              <p className="text-sm font-semibold text-ink">GoNest</p>
-              <p className="mt-1 text-xs text-muted">Recurring commute platform</p>
+              <p className="text-sm font-semibold text-ink">Ruby</p>
+              <p className="mt-1 text-xs text-muted">AI screen assistant</p>
             </div>
             <span className="rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-muted">
               In Development
             </span>
           </div>
           <div className="grid gap-3">
-            {['Subscription routes', 'Commuter profiles', 'Ride planning'].map(
+            {['Voice + Gemini', 'Desktop automation', 'Floating UI'].map(
               (item, index) => (
                 <div
                   key={item}
