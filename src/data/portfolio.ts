@@ -100,54 +100,34 @@ export const skillGroups: SkillGroup[] = [
 ];
 
 export const featuredProject = {
-  title: 'GoNest',
+  title: 'Ruby — AI Screen Assistant',
   status: 'In Development',
   description:
-    'GoNest is a recurring commute platform designed to help students, professionals, teachers, and daily commuters subscribe to recurring rides instead of booking transportation every day.',
-  role: ['Founder', 'Product Designer', 'Developer'],
-  currentStatus: 'Actively under development.',
+    'Ruby is a Windows desktop AI assistant with a floating UI, voice input/output, Gemini-powered responses, and local Windows actions — from screen capture and app control to autonomous desktop workflows.',
+  role: ['Creator', 'Python Engineer', 'UI Designer'],
+  currentStatus: 'Actively under development with voice, automation, and desktop agent features.',
   aiStatement:
     'I leverage AI-assisted development together with software engineering principles to research, prototype, debug, and build practical solutions for real-world problems.',
   features: [
-    'Recurring ride subscription flow for repeat commuters',
-    'User-focused product structure for students, teachers, professionals, and daily riders',
-    'Clean booking, route, and ride-management concepts for everyday use',
-    'Practical development process focused on research, prototyping, debugging, and iteration',
+    'Floating liquid-blob UI with operational and emotional expression states',
+    'Voice input/output with Gemini-powered responses',
+    'Local Windows actions: screenshots, app control, system settings, and more',
+    'Autonomous desktop mode with cursor companion and safety controls',
   ],
-  technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Firebase'],
-  screenshots: [
-    {
-      src: assetPath('/assets/gonest-features.png'),
-      alt: 'GoNest feature section showing monthly commute booking, shared ride savings, passenger matching, and safe travel cards',
-    },
-    {
-      src: assetPath('/assets/gonest-savings.png'),
-      alt: 'GoNest savings calculator section showing commute savings messaging',
-    },
-  ] satisfies ProjectScreenshot[],
-  githubHref: 'https://github.com/Syed-Haseeb97/GoNest',
-  liveHref: 'https://gonest-994788732310.us-west1.run.app/',
+  technologies: ['Python', 'PyQt6', 'Gemini API', 'SpeechRecognition', 'Playwright'],
+  githubHref: 'https://github.com/Syed-Haseeb97/ai_agent',
+  liveHref: 'https://github.com/Syed-Haseeb97/ai_agent',
 };
 
 export const projectPlaceholders: Project[] = [
   {
-    title: 'Task Tracker',
+    title: 'MOBILITY',
     description:
-      'A modern productivity platform featuring Kanban workflows, Google Calendar & Tasks integration, voice-powered task creation, motivational workflows, and responsive UI.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Google Workspace'],
-    imageLabel: 'Task Tracker product screenshots',
-    screenshots: [
-      {
-        src: assetPath('/assets/task-tracker-dashboard.png'),
-        alt: 'Task Tracker dashboard showing progress, priority balance, and Google Workspace sign-in',
-      },
-      {
-        src: assetPath('/assets/task-tracker-kanban.png'),
-        alt: 'Task Tracker Kanban board with To Do, Doing, and Done task columns',
-      },
-    ],
-    githubHref: 'https://github.com/Syed-Haseeb97/Task-Arrangement-App',
-    liveHref: 'https://task-tracker-994788732310.us-west1.run.app/',
+      'Campus-first vehicle rental marketplace connecting student and faculty renters with vehicle owners. Browse by campus zone, list vehicles, manage bookings, and run owner/admin workflows.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
+    imageLabel: 'MOBILITY marketplace',
+    githubHref: 'https://github.com/Syed-Haseeb97/mobility_03',
+    liveHref: 'https://mobility-03.vercel.app',
   },
 ];
 
