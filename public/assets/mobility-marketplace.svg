@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="mbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#mbg)"/>
+  <rect x="0" y="0" width="1280" height="72" fill="#0f172a"/>
+  <text x="48" y="46" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">MOBILITY</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Rent · Host · Admin</text>
+  <text x="1100" y="46" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Campus marketplace</text>
+  <text x="48" y="140" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">YOUR CAMPUS, IN MOTION</text>
+  <text x="48" y="185" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="18">Two-wheeler &amp; passenger vehicle rental for campus and urban edges</text>
+  <rect x="48" y="220" width="700" height="56" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="72" y="255" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="16">Search by campus zone, vehicle type…</text>
+  <rect x="620" y="228" width="116" height="40" rx="10" fill="#0f172a"/>
+  <text x="650" y="254" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="15">Search</text>
+  <g>
+    <rect x="48" y="320" width="360" height="320" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="48" y="320" width="360" height="180" rx="16" fill="#1e293b"/>
+    <ellipse cx="228" cy="410" rx="110" ry="40" fill="#334155"/>
+    <rect x="150" y="370" width="156" height="55" rx="12" fill="#475569"/>
+    <circle cx="175" cy="440" r="18" fill="#0f172a"/>
+    <circle cx="280" cy="440" r="18" fill="#0f172a"/>
+    <text x="72" y="540" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Honda Activa</text>
+    <text x="72" y="570" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zone A · 2-Wheeler · Verified docs</text>
+    <text x="72" y="605" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">₹249 / day</text>
+  </g>
+  <g>
+    <rect x="440" y="320" width="360" height="320" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="440" y="320" width="360" height="180" rx="16" fill="#0f172a"/>
+    <ellipse cx="620" cy="410" rx="120" ry="42" fill="#1e293b"/>
+    <rect x="530" y="365" width="180" height="60" rx="14" fill="#334155"/>
+    <circle cx="555" cy="440" r="18" fill="#020617"/>
+    <circle cx="685" cy="440" r="18" fill="#020617"/>
+    <text x="464" y="540" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Swift Dzire</text>
+    <text x="464" y="570" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="14">Zone B · 4-Wheeler · Owner listing</text>
+    <text x="464" y="605" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">₹999 / day</text>
+  </g>
+  <g>
+    <rect x="832" y="320" width="400" height="320" rx="16" fill="#0f172a"/>
+    <text x="864" y="380" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Roles</text>
+    <text x="864" y="430" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="16">● Renter — browse &amp; book</text>
+    <text x="864" y="475" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="16">● Owner — list &amp; handover</text>
+    <text x="864" y="520" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="16">● Admin — KYC &amp; moderation</text>
+    <text x="864" y="580" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Next.js · TypeScript · Tailwind</text>
+  </g>
+</svg>
