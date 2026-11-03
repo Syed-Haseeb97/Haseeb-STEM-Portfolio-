@@ -1,6 +1,8 @@
-# Haseeb | Student Developer Portfolio
+# Haseeb | STEM Portfolio
 
-A modern, responsive portfolio built with React, Vite, TypeScript, and Tailwind CSS.
+Modern, responsive portfolio for **Syed Haseeb Bukhari** — founding engineer and student developer at IIIT Tiruchirappalli.
+
+Built with React, Vite, TypeScript, and Tailwind CSS.
 
 ## 🌐 Live Website
 
@@ -10,71 +12,73 @@ https://syed-haseeb97.github.io/Haseeb-STEM-Portfolio-/
 
 ## 👋 About
 
-I'm Haseeb, a student developer passionate about building software that solves real-world problems.
+I'm Haseeb, a B.Tech CSE student at IIIT Tiruchirappalli and founding engineer at [dormy.in](https://dormy.in).
 
-I enjoy combining modern development practices with AI-assisted engineering to rapidly prototype, build, and improve practical applications.
+I focus on agentic AI, automation workflows, and practical product engineering. I use AI-assisted development together with solid software practices to ship maintainable tools and prototypes.
 
-My long-term goal is to build impactful technology products and startups.
+**Recent results**
+- Two 2nd-place finishes at **Atrang Fest 2026** (IIIT Tiruchirappalli)
+  - Startup Sprint (24-hour buildathon) — DeReel
+  - Crossover Hackathon — Kick Skill Marvel
 
 ---
 
 ## 🚀 Featured Project
 
-### GoNest
+### Ruby — AI Screen Assistant *(in development)*
 
-GoNest is a startup project focused on simplifying recurring daily transportation through a subscription-based platform.
+Windows desktop AI assistant with a floating UI, voice input/output, Gemini-powered responses, and local Windows actions (screen capture, app control, autonomous desktop workflows).
 
-Instead of booking rides every day, users can create recurring commute plans while drivers receive predictable recurring passengers.
-
-The project is being developed using modern web technologies together with AI-assisted development tools to accelerate development while maintaining engineering quality.
+- **Repo:** [github.com/Syed-Haseeb97/ai_agent](https://github.com/Syed-Haseeb97/ai_agent)
+- **Stack:** Python, PyQt6, Gemini API, SpeechRecognition, Playwright
 
 ---
 
-## 🛠 Tech Stack
+## 📦 Other Projects
 
-- React
-- TypeScript
+### MOBILITY
+Campus vehicle rental marketplace prototype. Browse by campus zone, list vehicles, manage bookings, and run owner/admin workflows.
+
+- **Repo:** [github.com/Syed-Haseeb97/mobility_03](https://github.com/Syed-Haseeb97/mobility_03)
+- **Live:** [mobility-03.vercel.app](https://mobility-03.vercel.app)
+- **Stack:** Next.js, React, TypeScript, Tailwind CSS, Three.js
+
+### DeReel
+Android app built in a 24-hour Startup Sprint. Instagram WebView with Home feed and general Reels redirected to the DM inbox; Reels opened from a DM are guarded against navigation into the general feed.
+
+- **Repo:** [github.com/Syed-Haseeb97/DeReel_instagram](https://github.com/Syed-Haseeb97/DeReel_instagram)
+- **Stack:** Kotlin, Android, WebView
+
+---
+
+## 🛠 Tech Stack (this site)
+
+- React + TypeScript
 - Vite
 - Tailwind CSS
-- GitHub Actions
-- GitHub Pages
+- GitHub Actions + GitHub Pages
 
 ---
 
 ## ✨ Features
 
-- Responsive design
-- Modern UI
-- Fast Vite build
-- GitHub Actions deployment
-- Mobile-friendly layout
-- Project showcase
-- Contact section
-- Resume download
+- Responsive, mobile-friendly layout
+- Project showcase with status and honest descriptions
+- Skills and contact sections
+- Resume download (`public/assets/Haseeb_resume_latest.pdf`)
 
 ---
 
 ## 💻 Running Locally
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/Syed-Haseeb97/Haseeb-STEM-Portfolio-.git
-```
-
-Install dependencies:
-
-```bash
+cd Haseeb-STEM-Portfolio-
 npm install
-```
-
-Run locally:
-
-```bash
 npm run dev
 ```
 
-Build production version:
+Build:
 
 ```bash
 npm run build
@@ -82,31 +86,30 @@ npm run build
 
 ---
 
-## 📂 Repository Structure
+## 📂 Structure
 
 ```
 src/
+  components/
+  data/portfolio.ts    # projects, skills, links
 public/
+  assets/              # resume PDFs, project visuals
 .github/workflows/
-package.json
-vite.config.ts
-tailwind.config.ts
 ```
 
 ---
 
 ## 📫 Contact
 
-- GitHub: https://github.com/Syed-Haseeb97
+- GitHub: [github.com/Syed-Haseeb97](https://github.com/Syed-Haseeb97)
+- Email: haseebbukhari97@gmail.com
+- LinkedIn: [syed-haseeb-bukhari](https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8)
 - Portfolio: https://syed-haseeb97.github.io/Haseeb-STEM-Portfolio-/
 
 ---
 
-## 📄 License
-
-This project is intended for personal portfolio use.
-
-
 ## Deployment notes
 
-The portfolio is configured for GitHub Pages. Run `npm run build` locally before publishing changes so broken asset paths or TypeScript errors are caught before deployment.
+Configured for GitHub Pages. Run `npm run build` locally before publishing so asset paths and TypeScript errors are caught early.
+
+This project is for personal portfolio use.
