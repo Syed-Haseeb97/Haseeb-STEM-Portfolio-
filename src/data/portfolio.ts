@@ -1,154 +1,142 @@
-import {
-  Code2,
-  Database,
-  Figma,
-  FileCode2,
-  GitBranch,
-  Globe2,
-  Layers3,
-  Server,
-  TerminalSquare,
-} from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+// Editorial Data for Syed Haseeb Bukhari Portfolio
+const BASE_URL = import.meta.env.BASE_URL;
 
-const BASE_PATH = '/Haseeb-STEM-Portfolio-';
-
-const assetPath = (path: string): string => {
-  return `${BASE_PATH}${path}`;
+export const assetPath = (path: string): string => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${BASE_URL}${cleanPath}`;
 };
 
-export interface SkillGroup {
+export interface ProjectItem {
+  id: string;
+  number: string;
   title: string;
-  icon: LucideIcon;
-  items: string[];
-}
-
-export interface ProjectLink {
-  label: string;
-  href: string;
-}
-
-export interface Project {
-  title: string;
+  tagline: string;
+  category: string;
   description: string;
+  role: string[];
   technologies: string[];
-  imageLabel: string;
-  screenshots?: ProjectScreenshot[];
-  githubHref: string;
-  liveHref: string;
+  award?: string;
+  githubUrl?: string;
+  liveUrl?: string;
+  isPrivate?: boolean;
+  visualPreview?: string;
 }
 
-export interface ProjectScreenshot {
-  src: string;
-  alt: string;
-}
-
-export const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
-];
-
-export const profileLinks = {
+export const personalInfo = {
+  name: 'Syed Haseeb Bukhari',
+  title: 'Engineer & Builder',
+  positioning: 'CSE undergraduate at IIIT Trichy, Founding Engineer at dormy.in, and developer exploring agentic AI, full-stack systems, and autonomous workflows.',
+  email: 'haseebbukhari97@gmail.com',
   github: 'https://github.com/Syed-Haseeb97',
   linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
-  email: 'mailto:haseebbukhari97@gmail.com',
-  resume: assetPath('/assets/Haseeb_resume_latest.pdf'),
+  resumeUrl: assetPath('assets/Haseeb_resume_latest.pdf'),
 };
 
-export const profileDetails = {
-  email: 'haseebbukhari97@gmail.com',
-  githubLabel: 'github.com/Syed-Haseeb97',
-  linkedinLabel: 'linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
-  portfolioImage: assetPath('/assets/portfolio.png'),
-};
-
-export const achievements = [
-  '10/10 CGPA in Secondary School',
-  'Physics Olympiad Intellectual Award',
-  'School Captain Leadership Role',
-  'Multiple Academic Excellence Awards',
-];
-
-export const skillGroups: SkillGroup[] = [
-  {
-    title: 'Programming',
-    icon: TerminalSquare,
-    items: ['Python', 'Java', 'JavaScript', 'TypeScript'],
-  },
-  {
-    title: 'Frontend',
-    icon: FileCode2,
-    items: ['React', 'HTML', 'CSS', 'Tailwind CSS'],
-  },
-  {
-    title: 'Backend',
-    icon: Server,
-    items: ['Node.js', 'Express'],
-  },
-  {
-    title: 'Databases',
-    icon: Database,
-    items: ['Firebase', 'MongoDB'],
-  },
-  {
-    title: 'Tools',
-    icon: GitBranch,
-    items: ['Git', 'GitHub', 'VS Code', 'Figma'],
-  },
-];
-
-export const featuredProject = {
-  title: 'Ruby — AI Screen Assistant',
-  status: 'In Development',
-  description:
-    'Ruby is a Windows desktop AI assistant with a floating UI, voice input/output, Gemini-powered responses, and local Windows actions — from screen capture and app control to autonomous desktop workflows.',
-  role: ['Creator', 'Python Engineer', 'UI Designer'],
-  currentStatus: 'Actively under development with voice, automation, and desktop agent features.',
-  aiStatement:
-    'I leverage AI-assisted development together with software engineering principles to research, prototype, debug, and build practical solutions for real-world problems.',
-  features: [
-    'Floating liquid-blob UI with operational and emotional expression states',
-    'Voice input/output with Gemini-powered responses',
-    'Local Windows actions: screenshots, app control, system settings, and more',
-    'Autonomous desktop mode with cursor companion and safety controls',
+export const aboutData = {
+  narrative: `I am an engineer focused on the intersection of agentic workflows, systems engineering, and software products. Grounded in mathematical foundations and computer science principles, I build practical tools ranging from desktop automation agents to mobile-first campus platforms. Currently pursuing my Computer Science degree at the Indian Institute of Information Technology (IIIT) Trichy while engineering high-throughput products.`,
+  details: [
+    { label: 'EDUCATION', value: 'B.Tech in Computer Science & Engineering, IIIT Trichy' },
+    { label: 'CURRENT ROLE', value: 'Founding Engineer @ dormy.in' },
+    { label: 'CORE DISCIPLINES', value: 'Agentic AI Systems, Full-Stack Architecture, Android Development' },
+    { label: 'LOCATION', value: 'Tiruchirappalli & Hyderabad, India' },
   ],
-  technologies: ['Python', 'PyQt6', 'Gemini API', 'SpeechRecognition', 'Playwright'],
-  screenshots: [
-    {
-      src: assetPath('/assets/ruby-ai-assistant.svg'),
-      alt: 'Ruby AI screen assistant conversation UI with floating liquid orb',
-    },
-    {
-      src: assetPath('/assets/ruby-desktop-mode.svg'),
-      alt: 'Ruby autonomous desktop mode with cursor companion and safety controls',
-    },
-  ] satisfies ProjectScreenshot[],
-  githubHref: 'https://github.com/Syed-Haseeb97/ai_agent',
-  liveHref: 'https://github.com/Syed-Haseeb97/ai_agent',
 };
 
-export const projectPlaceholders: Project[] = [
+export const projects: ProjectItem[] = [
   {
-    title: 'MOBILITY',
+    id: 'ai-agent',
+    number: '01',
+    title: 'Ruby — Desktop AI Assistant',
+    tagline: 'Autonomous Windows Screen & Desktop Agent',
+    category: 'AGENTIC AI / PYTHON',
     description:
-      'Campus-first vehicle rental marketplace connecting student and faculty renters with vehicle owners. Browse by campus zone, list vehicles, manage bookings, and run owner/admin workflows.',
+      'A Windows desktop companion featuring a fluid liquid-orb interface, multimodal vision inspection, voice I/O with Gemini API, and autonomous OS-level workflow executions via safety-governed action planners.',
+    role: ['Sole Creator', 'Python Engineer', 'System Architecture'],
+    technologies: ['Python', 'PyQt6', 'Gemini API', 'Playwright', 'SpeechRecognition'],
+    githubUrl: 'https://github.com/Syed-Haseeb97/ai_agent',
+    visualPreview: assetPath('assets/ruby-ai-assistant.svg'),
+  },
+  {
+    id: 'mobility',
+    number: '02',
+    title: 'MOBILITY',
+    tagline: 'Campus-First Peer-to-Peer Vehicle Marketplace',
+    category: 'FULL-STACK / PRODUCT',
+    description:
+      'Campus vehicle rental ecosystem connecting student and faculty renters with vehicle owners. Engineered with zone filtering, booking scheduling, host telemetry dashboards, and 3D vehicle visualizers.',
+    role: ['Full-Stack Lead', 'Frontend Architecture'],
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
-    imageLabel: 'MOBILITY marketplace',
-    screenshots: [
-      {
-        src: assetPath('/assets/mobility-marketplace.svg'),
-        alt: 'MOBILITY campus vehicle rental marketplace with listings and search',
-      },
-      {
-        src: assetPath('/assets/mobility-host.svg'),
-        alt: 'MOBILITY host dashboard with fleet stats and handover desk',
-      },
-    ],
-    githubHref: 'https://github.com/Syed-Haseeb97/mobility_03',
-    liveHref: 'https://mobility-03.vercel.app',
+    githubUrl: 'https://github.com/Syed-Haseeb97/mobility_03',
+    liveUrl: 'https://mobility-03.vercel.app',
+    visualPreview: assetPath('assets/mobility-marketplace.svg'),
+  },
+  {
+    id: 'dereel',
+    number: '03',
+    title: 'DeReel for Instagram',
+    tagline: 'Algorithmic Distraction Interceptor & Focus Engine',
+    category: 'HACKATHON WINNER / WELLBEING',
+    award: '2nd Prize Winner — Hackathon',
+    description:
+      'A cognitive friction tool that surgically disables short-form addictive loops and Reels on Instagram while preserving direct messaging and intentional networking utilities.',
+    role: ['Ideation', 'Full-Stack Implementation'],
+    technologies: ['JavaScript', 'WebExtensions API', 'DOM Mutation Engine'],
+    githubUrl: 'https://github.com/Syed-Haseeb97/DeReel_instagram',
+  },
+  {
+    id: 'kickskill',
+    number: '04',
+    title: 'Kick Skill Marvel',
+    tagline: 'Gamified Skill Acquisition & Training Platform',
+    category: 'HACKATHON WINNER / EDTECH',
+    award: '2nd Prize Winner — Hackathon',
+    description:
+      'Gamified interactive capability assessment engine designed to track progression milestones and optimize technical mastery curves with Marvel-themed narrative dynamics.',
+    role: ['Frontend & Core Logic'],
+    technologies: ['React', 'Interactive State Trees', 'UI Systems'],
+    isPrivate: true,
   },
 ];
 
-export const projectIcons = [Code2, Globe2, Layers3, Figma];
+export const experienceData = [
+  {
+    role: 'Founding Engineer',
+    organization: 'dormy.in',
+    period: '2024 — Present',
+    description:
+      'Spearheading core architectural decisions, full-stack product development, and automated tenant/student housing workflows for campus accommodation infrastructure.',
+  },
+  {
+    role: '2nd Prize Winner',
+    organization: 'DeReel Project Hackathon',
+    period: 'Hackathon Award',
+    description:
+      'Engineered an anti-distraction dopamine interceptor that reclaims attention without compromising core social communication primitives.',
+  },
+  {
+    role: '2nd Prize Winner',
+    organization: 'Kick Skill Marvel Hackathon',
+    period: 'Hackathon Award',
+    description:
+      'Formulated an experiential competency trainer using state-machine guided gamification pipelines.',
+  },
+];
+
+export const skillsData = [
+  {
+    group: '01 / AGENTS & AI WORKFLOWS',
+    items: ['Gemini API & Multimodal Tool Calling', 'Autonomous Desktop Agent Orchestration', 'Prompt & Vision Pipelines', 'Local Action Planners'],
+  },
+  {
+    group: '02 / ARCHITECTURE & FRONTEND',
+    items: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Three.js / React Three Fiber', 'GSAP & Motion Systems'],
+  },
+  {
+    group: '03 / SYSTEMS, BACKEND & MOBILE',
+    items: ['Python & PyQt6', 'Android / Jetpack Compose', 'Node.js & Express', 'PostgreSQL / Neon', 'Firebase'],
+  },
+  {
+    group: '04 / ENGINEERING RIGOR',
+    items: ['Git & Version Control', 'Web Automation (Playwright)', 'Linux & Windows Tooling', 'State Machine Architecture'],
+  },
+];

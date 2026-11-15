@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="50%" stop-color="#121a33"/>
+      <stop offset="100%" stop-color="#0a0f1c"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="45%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="80" y="60" width="1120" height="600" rx="18" fill="#111827" stroke="#1f2937" stroke-width="2"/>
+  <rect x="80" y="60" width="1120" height="42" rx="18" fill="#0f172a"/>
+  <circle cx="110" cy="81" r="6" fill="#ef4444"/>
+  <circle cx="132" cy="81" r="6" fill="#f59e0b"/>
+  <circle cx="154" cy="81" r="6" fill="#22c55e"/>
+  <text x="640" y="86" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Ruby — AI Screen Assistant</text>
+  <rect x="110" y="130" width="520" height="480" rx="14" fill="#0b1220" stroke="#1e293b"/>
+  <text x="140" y="175" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Conversation</text>
+  <rect x="140" y="200" width="380" height="48" rx="12" fill="#1e293b"/>
+  <text x="160" y="230" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15">Hey Ruby, open my project folder…</text>
+  <rect x="200" y="270" width="390" height="64" rx="12" fill="#0ea5e9" fill-opacity="0.15" stroke="#0ea5e9" stroke-opacity="0.4"/>
+  <text x="220" y="300" fill="#e0f2fe" font-family="Segoe UI, Arial, sans-serif" font-size="15">Opened Documents/projects and listed 12 files.</text>
+  <text x="220" y="320" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="13">Voice · Gemini · Desktop actions</text>
+  <rect x="140" y="360" width="300" height="40" rx="10" fill="#1e293b"/>
+  <text x="160" y="385" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="14">Listening…</text>
+  <circle cx="410" cy="380" r="6" fill="#22c55e"/>
+  <rect x="660" y="130" width="500" height="480" rx="14" fill="#0b1220" stroke="#1e293b"/>
+  <text x="690" y="175" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Capabilities</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#cbd5e1">
+    <text x="690" y="230">● Floating liquid-blob UI</text>
+    <text x="690" y="275">● Voice in / voice out</text>
+    <text x="690" y="320">● Gemini-powered replies</text>
+    <text x="690" y="365">● Screenshots &amp; app control</text>
+    <text x="690" y="410">● Autonomous desktop mode</text>
+    <text x="690" y="455">● Safety policy + stop hotkey</text>
+  </g>
+  <circle cx="1080" cy="560" r="90" fill="url(#glow)" filter="url(#soft)"/>
+  <circle cx="1080" cy="560" r="48" fill="url(#orb)"/>
+  <circle cx="1065" cy="545" r="10" fill="#e0f2fe" opacity="0.85"/>
+  <text x="1080" y="640" text-anchor="middle" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="13">Ruby</text>
+</svg>

@@ -1,28 +1,22 @@
 import type { Config } from 'tailwindcss';
 
 export default {
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        ink: '#111827',
-        muted: '#6B7280',
-        accent: '#2563EB',
-        line: '#E5E7EB',
+        ink: 'var(--color-ink)',
+        bone: 'var(--color-bone)',
+        paper: 'var(--color-paper)',
+        graphite: 'var(--color-graphite)',
+        hairlineLight: 'var(--color-hairline-light)',
+        hairlineDark: 'var(--color-hairline-dark)',
+        accent: 'var(--color-accent)',
       },
       fontFamily: {
-        sans: [
-          'Inter',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'sans-serif',
-        ],
-      },
-      boxShadow: {
-        soft: '0 18px 48px rgba(17, 24, 39, 0.08)',
+        display: ['"Instrument Serif"', 'serif'],
+        sans: ['Geist', 'sans-serif'],
+        mono: ['"Geist Mono"', 'monospace'],
       },
     },
   },

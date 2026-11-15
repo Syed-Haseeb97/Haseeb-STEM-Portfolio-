@@ -1,25 +1,57 @@
-import { About } from './components/About';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { GitHubSection } from './components/GitHubSection';
-import { Hero } from './components/Hero';
-import { Navbar } from './components/Navbar';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
+import React, { useEffect } from 'react';
+import Lenis from 'lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Hero } from './components/sections/Hero';
+import { About } from './components/sections/About';
+import { Projects } from './components/sections/Projects';
+import { Experience } from './components/sections/Experience';
+import { Skills } from './components/sections/Skills';
+import { ContactFooter } from './components/sections/ContactFooter';
+import { CustomCursor } from './components/ui/CustomCursor';
 
-export function App() {
+gsap.registerPlugin(ScrollTrigger);
+
+export const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize Lenis smooth scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+    });
+
+    // Synchronize Lenis with ScrollTrigger via gsap.ticker
+    lenis.on('scroll', ScrollTrigger.update);
+
+    const tickerCb = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+
+    gsap.ticker.add(tickerCb);
+    gsap.ticker.lagSmoothing(0);
+
+    return () => {
+      gsap.ticker.remove(tickerCb);
+      lenis.destroy();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white text-ink">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <GitHubSection />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen bg-ink selection:bg-accent selection:text-paper">
+      <CustomCursor />
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Skills />
+      <ContactFooter />
     </div>
   );
-}
+};
+
+export default App;

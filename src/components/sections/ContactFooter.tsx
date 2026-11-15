@@ -1,0 +1,93 @@
+import React from 'react';
+import { SectionHeader } from '../ui/SectionHeader';
+import { personalInfo } from '../../data/portfolio';
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
+
+export const ContactFooter: React.FC = () => {
+  return (
+    <footer
+      id="contact"
+      className="w-full py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-bone text-ink"
+    >
+      <div className="max-w-6xl mx-auto">
+        <SectionHeader number="06" label="INQUIRIES & DOSSIER" dark={false} />
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20">
+          <div className="lg:col-span-8">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.08] tracking-tight mb-8">
+              Open to engineering discussions, autonomous systems research, and high-impact software ventures.
+            </h2>
+
+            <div className="flex flex-wrap gap-6 items-center pt-2">
+              <a
+                href={personalInfo.resumeUrl}
+                download="Syed_Haseeb_Bukhari_Resume.pdf"
+                className="inline-flex items-center space-x-3 bg-ink text-bone px-6 py-3.5 font-mono text-xs uppercase tracking-widest hover:bg-accent transition-colors"
+              >
+                <span>DOWNLOAD DOSSIER [PDF]</span>
+                <ArrowDownRight className="w-4 h-4 text-accent hover:text-bone" />
+              </a>
+
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="inline-flex items-center space-x-3 border border-ink px-6 py-3.5 font-mono text-xs uppercase tracking-widest text-ink hover:border-accent hover:text-accent transition-colors"
+              >
+                <span>SEND DIRECT DISPATCH</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-4 bg-paper border border-hairlineLight p-6 md:p-8">
+            <span className="block font-mono text-xs uppercase tracking-widest text-graphite mb-4 pb-2 border-b border-hairlineLight">
+              DIRECT REACH
+            </span>
+            <div className="space-y-4 font-mono text-xs">
+              <div>
+                <span className="text-[10px] text-graphite block uppercase">EMAIL</span>
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="text-ink hover:text-accent transition-colors font-medium break-all"
+                >
+                  {personalInfo.email}
+                </a>
+              </div>
+              <div>
+                <span className="text-[10px] text-graphite block uppercase">GITHUB</span>
+                <a
+                  href={personalInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink hover:text-accent transition-colors font-medium"
+                >
+                  github.com/Syed-Haseeb97
+                </a>
+              </div>
+              <div>
+                <span className="text-[10px] text-graphite block uppercase">LINKEDIN</span>
+                <a
+                  href={personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink hover:text-accent transition-colors font-medium"
+                >
+                  Syed Haseeb Bukhari
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quiet Colophon */}
+        <div className="pt-8 border-t border-hairlineLight flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-wider text-graphite">
+          <div>
+            &copy; {new Date().getFullYear()} SYED HASEEB BUKHARI &bull; ALL RIGHTS RESERVED
+          </div>
+          <div>
+            TYPESET IN INSTRUMENT SERIF & GEIST &bull; VERMILION ACCENT
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};

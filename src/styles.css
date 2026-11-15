@@ -3,27 +3,70 @@
 @tailwind utilities;
 
 :root {
-  color: #111827;
-  background: #ffffff;
-  font-synthesis: none;
+  --color-ink: #111110;
+  --color-bone: #ECE7DD;
+  --color-paper: #F6F2EA;
+  --color-graphite: #6B675F;
+  --color-hairline-light: #D8D2C6;
+  --color-hairline-dark: #2A2926;
+  --color-accent: #D9432B;
+}
+
+html {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+  font-family: 'Geist', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
+/* Subtle editorial film grain */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.025;
+  z-index: 999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+/* Custom selection */
 ::selection {
-  background: rgba(37, 99, 235, 0.14);
+  background-color: var(--color-accent);
+  color: var(--color-paper);
 }
 
-@layer base {
-  a,
-  button {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2;
-  }
+/* Hide scrollbar for neat horizontal scroll feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lenis smooth scrolling class support */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
