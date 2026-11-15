@@ -28,7 +28,7 @@ export const personalInfo = {
   positioning: 'CSE undergraduate at IIIT Trichy, Founding Engineer at dormy.in, and developer exploring agentic AI, full-stack systems, and autonomous workflows.',
   email: 'haseebbukhari97@gmail.com',
   github: 'https://github.com/Syed-Haseeb97',
-  instagram: 'https://www.instagram.com/haseeb.larp',
+  instagram: 'https://www.instagram.com/_h4seeb._',
   linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
   resumeUrl: assetPath('assets/Haseeb_resume_latest.pdf'),
   githubStats: {
