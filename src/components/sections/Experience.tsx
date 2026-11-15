@@ -6,7 +6,7 @@ export const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="w-full py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-bone text-ink border-b border-hairlineLight"
+      className="w-full py-16 sm:py-24 md:py-36 px-5 sm:px-8 md:px-16 lg:px-24 bg-bone text-ink border-b border-hairlineLight"
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader number="04" label="EXPERIENCE & RECOGNITION" dark={false} />

@@ -1,62 +1,92 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export const CustomCursor: React.FC = () => {
-  const cursorDotRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only show on desktop pointers
-    if (window.matchMedia('(pointer: coarse)').matches) {
+    // Disable completely on touch devices
+    if (window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window) {
       return;
     }
 
+    const cursorEl = cursorRef.current;
+    const ringEl = ringRef.current;
+    if (!cursorEl || !ringEl) return;
+
+    let mouseX = -100;
+    let mouseY = -100;
+    let isVisible = false;
+    let isHovered = false;
+    let animFrameId: number;
+
     const onMouseMove = (e: MouseEvent) => {
-      setIsVisible(true);
-      if (cursorDotRef.current) {
-        cursorDotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isVisible) {
+        isVisible = true;
+        cursorEl.style.opacity = '1';
       }
     };
 
-    const onMouseEnter = () => setIsVisible(true);
-    const onMouseLeave = () => setIsVisible(false);
+    const render = () => {
+      // Direct 1:1 hardware-accelerated transform with zero latency
+      cursorEl.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      animFrameId = requestAnimationFrame(render);
+    };
 
-    const onElementHover = (e: MouseEvent) => {
+    const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
-      if (target && target.closest('a, button, [role="button"], input, textarea')) {
-        setIsHovered(true);
-      } else {
-        setIsHovered(false);
+      const interactive = target && target.closest('a, button, [role="button"], input, textarea, select');
+      
+      if (interactive && !isHovered) {
+        isHovered = true;
+        ringEl.className = 'w-8 h-8 rounded-full border border-accent bg-accent/15 transition-[width,height,background-color,border-color,opacity] duration-150 ease-out';
+      } else if (!interactive && isHovered) {
+        isHovered = false;
+        ringEl.className = 'w-2 h-2 rounded-full bg-accent opacity-90 transition-[width,height,background-color,border-color,opacity] duration-150 ease-out';
       }
     };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseover', onElementHover);
-    document.addEventListener('mouseenter', onMouseEnter);
+    const onMouseLeave = () => {
+      isVisible = false;
+      cursorEl.style.opacity = '0';
+    };
+
+    const onMouseEnter = () => {
+      isVisible = true;
+      cursorEl.style.opacity = '1';
+    };
+
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('mouseover', onMouseOver, { passive: true });
     document.addEventListener('mouseleave', onMouseLeave);
+    document.addEventListener('mouseenter', onMouseEnter);
+
+    animFrameId = requestAnimationFrame(render);
 
     return () => {
+      cancelAnimationFrame(animFrameId);
       window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('mouseover', onElementHover);
-      document.removeEventListener('mouseenter', onMouseEnter);
+      window.removeEventListener('mouseover', onMouseOver);
       document.removeEventListener('mouseleave', onMouseLeave);
+      document.removeEventListener('mouseenter', onMouseEnter);
     };
   }, []);
 
-  if (!isVisible) return null;
-
   return (
     <div
-      ref={cursorDotRef}
-      className="fixed top-0 left-0 pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
-      style={{ willChange: 'transform' }}
+      ref={cursorRef}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] opacity-0 flex items-center justify-center will-change-transform"
+      style={{
+        transform: 'translate3d(-100px, -100px, 0) translate(-50%, -50%)',
+        transition: 'opacity 0.2s ease-out',
+      }}
     >
       <div
-        className={`rounded-full transition-all duration-200 ease-out ${
-          isHovered
-            ? 'w-7 h-7 bg-transparent border border-accent opacity-90 scale-125'
-            : 'w-2 h-2 bg-accent opacity-75'
-        }`}
+        ref={ringRef}
+        className="w-2 h-2 rounded-full bg-accent opacity-90 transition-[width,height,background-color,border-color,opacity] duration-150 ease-out"
       />
     </div>
   );

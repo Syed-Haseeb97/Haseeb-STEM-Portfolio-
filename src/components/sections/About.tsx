@@ -7,18 +7,18 @@ export const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="w-full py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-bone text-ink border-b border-hairlineLight"
+      className="w-full py-16 sm:py-24 md:py-36 px-5 sm:px-8 md:px-16 lg:px-24 bg-bone text-ink border-b border-hairlineLight"
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeader number="02" label="BIOGRAPHY & FORMATION" dark={false} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Main Statement */}
           <div className="lg:col-span-7">
-            <h3 className="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.12] tracking-tight text-ink mb-8">
+            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-ink mb-6 sm:mb-8">
               Engineering autonomous workflows with mathematical discipline and full-stack rigor.
             </h3>
-            <p className="font-sans text-base md:text-lg text-graphite leading-relaxed mb-6">
+            <p className="font-sans text-sm sm:text-base md:text-lg text-graphite leading-relaxed mb-6">
               {aboutData.narrative}
             </p>
             <div className="pt-4 flex items-center space-x-6 font-mono text-xs uppercase tracking-wider">

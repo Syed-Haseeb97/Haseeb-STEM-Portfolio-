@@ -46,21 +46,21 @@ export const Projects: React.FC = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative w-full py-24 md:py-32 px-6 md:px-16 lg:px-24 bg-ink text-bone border-b border-hairlineDark overflow-hidden"
+      className="relative w-full py-16 sm:py-24 md:py-32 px-5 sm:px-8 md:px-16 lg:px-24 bg-ink text-bone border-b border-hairlineDark overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto mb-12">
+      <div className="max-w-6xl mx-auto mb-8 sm:mb-12">
         <SectionHeader number="03" label="INDEX OF WORKS & RESEARCH" dark={true} />
       </div>
 
       {/* Track container */}
       <div
         ref={horizontalTrackRef}
-        className="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:w-max lg:will-change-transform"
+        className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 lg:w-max lg:will-change-transform"
       >
         {projects.map((project) => (
           <div
             key={project.id}
-            className="w-full lg:w-[540px] flex-shrink-0 bg-[#161514] border border-hairlineDark p-8 md:p-10 flex flex-col justify-between group hover:border-hairlineDark/90 transition-colors"
+            className="w-full lg:w-[540px] flex-shrink-0 bg-[#161514] border border-hairlineDark p-6 sm:p-8 md:p-10 flex flex-col justify-between group hover:border-hairlineDark/90 transition-colors"
           >
             <div>
               {/* Card Meta Top */}
