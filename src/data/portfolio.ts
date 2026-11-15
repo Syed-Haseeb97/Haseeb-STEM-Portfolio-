@@ -28,8 +28,27 @@ export const personalInfo = {
   positioning: 'CSE undergraduate at IIIT Trichy, Founding Engineer at dormy.in, and developer exploring agentic AI, full-stack systems, and autonomous workflows.',
   email: 'haseebbukhari97@gmail.com',
   github: 'https://github.com/Syed-Haseeb97',
+  instagram: 'https://www.instagram.com/haseeb.larp',
   linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
   resumeUrl: assetPath('assets/Haseeb_resume_latest.pdf'),
+  githubStats: {
+    username: 'Syed-Haseeb97',
+    displayName: 'Syed Haseeb',
+    bio: "Building products • IIIT Trichy CSE '30",
+    repos: '17',
+    followers: '7',
+    following: '7',
+    avatar: assetPath('assets/github_profile.png'),
+  },
+  instagramStats: {
+    username: 'haseeb.larp',
+    displayName: 'Haseeeeb',
+    bio: 'curious?',
+    posts: '0',
+    followers: '74',
+    following: '114',
+    avatar: assetPath('assets/insta_profile.png'),
+  },
 };
 
 export const aboutData = {

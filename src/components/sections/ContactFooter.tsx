@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionHeader } from '../ui/SectionHeader';
 import { personalInfo } from '../../data/portfolio';
+import { AnimatedSocialCard } from '../ui/AnimatedSocialCard';
 import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
 
 export const ContactFooter: React.FC = () => {
@@ -88,6 +89,17 @@ export const ContactFooter: React.FC = () => {
                 </a>
               </div>
               <div>
+                <span className="text-[10px] text-graphite block uppercase">INSTAGRAM</span>
+                <a
+                  href={personalInfo.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink hover:text-accent transition-colors font-medium"
+                >
+                  @haseeb.larp
+                </a>
+              </div>
+              <div>
                 <span className="text-[10px] text-graphite block uppercase">LINKEDIN</span>
                 <a
                   href={personalInfo.linkedin}
@@ -99,6 +111,67 @@ export const ContactFooter: React.FC = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Interactive Social Cards Spotlight Showcase */}
+        <div className="pt-16 pb-8 border-t border-hairlineLight">
+          <div className="text-center max-w-xl mx-auto mb-6">
+            <span className="font-mono text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+              SOCIAL CARDS
+            </span>
+            <h3 className="font-display text-2xl sm:text-3xl text-ink">
+              Connect Across Development & Social
+            </h3>
+            <p className="font-sans text-xs text-graphite mt-2">
+              Hover to expand interactive cards with live profiles, follower metrics, and direct dispatches.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16 pt-8 pb-12">
+            {/* GitHub Card */}
+            <AnimatedSocialCard
+              platform="github"
+              username={personalInfo.githubStats.username}
+              displayName={personalInfo.githubStats.displayName}
+              roleOrBio={personalInfo.githubStats.bio}
+              stats={{
+                stat1: { count: personalInfo.githubStats.repos, label: 'Repos' },
+                stat2: { count: personalInfo.githubStats.followers, label: 'Followers' },
+                stat3: { count: personalInfo.githubStats.following, label: 'Following' },
+              }}
+              avatarSrc={personalInfo.githubStats.avatar}
+              primaryAction={{
+                label: 'Follow',
+                href: personalInfo.github,
+              }}
+              secondaryAction={{
+                label: 'View Repos',
+                href: `${personalInfo.github}?tab=repositories`,
+              }}
+            />
+
+            {/* Instagram Card */}
+            <AnimatedSocialCard
+              platform="instagram"
+              username={personalInfo.instagramStats.username}
+              displayName={personalInfo.instagramStats.displayName}
+              roleOrBio={personalInfo.instagramStats.bio}
+              stats={{
+                stat1: { count: personalInfo.instagramStats.posts, label: 'Posts' },
+                stat2: { count: personalInfo.instagramStats.followers, label: 'Followers' },
+                stat3: { count: personalInfo.instagramStats.following, label: 'Following' },
+              }}
+              avatarSrc={personalInfo.instagramStats.avatar}
+              primaryAction={{
+                label: 'Follow',
+                href: personalInfo.instagram,
+              }}
+              secondaryAction={{
+                label: 'Message',
+                href: personalInfo.instagram,
+              }}
+            />
           </div>
         </div>
 
