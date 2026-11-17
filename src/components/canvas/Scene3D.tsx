@@ -202,7 +202,7 @@ export const Scene3D: React.FC = () => {
             onClick={handleRequestTiltPermission}
             className="inline-flex items-center space-x-2 bg-ink/90 border border-hairlineLight text-bone px-3.5 py-2 rounded-full font-mono text-[10px] uppercase tracking-wider hover:border-accent transition-all shadow-lg backdrop-blur-sm"
           >
-            <Compass className="w-3.5 h-3.5 text-accent animate-spin" />
+            <Compass className="w-3.5 h-3.5 text-accent" />
             <span>Enable Tilt</span>
           </button>
         </div>

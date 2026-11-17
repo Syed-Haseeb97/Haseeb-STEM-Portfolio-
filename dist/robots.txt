@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syed-haseeb97.github.io/Haseeb-STEM-Portfolio-/sitemap.xml

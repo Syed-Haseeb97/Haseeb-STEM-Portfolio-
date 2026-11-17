@@ -49,6 +49,14 @@ export const personalInfo = {
     following: '114',
     avatar: assetPath('assets/insta_profile.png'),
   },
+  linkedinStats: {
+    username: 'syed-haseeb-bukhari',
+    displayName: 'Syed Haseeb',
+    bio: 'Founding Eng @ dormy.in · IIIT Trichy CSE',
+    connections: '50+',
+    posts: '—',
+    avatar: assetPath('assets/github_profile.png'),
+  },
 };
 
 export const aboutData = {

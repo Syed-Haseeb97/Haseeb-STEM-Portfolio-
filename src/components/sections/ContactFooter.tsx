@@ -141,14 +141,24 @@ export const ContactFooter: React.FC = () => {
                 stat3: { count: personalInfo.githubStats.following, label: 'Following' },
               }}
               avatarSrc={personalInfo.githubStats.avatar}
-              primaryAction={{
-                label: 'Follow',
-                href: personalInfo.github,
+              primaryAction={{ label: 'Follow', href: personalInfo.github }}
+              secondaryAction={{ label: 'View Repos', href: `${personalInfo.github}?tab=repositories` }}
+            />
+
+            {/* LinkedIn Card */}
+            <AnimatedSocialCard
+              platform="linkedin"
+              username={personalInfo.linkedinStats.username}
+              displayName={personalInfo.linkedinStats.displayName}
+              roleOrBio={personalInfo.linkedinStats.bio}
+              stats={{
+                stat1: { count: personalInfo.linkedinStats.connections, label: 'Connections' },
+                stat2: { count: personalInfo.linkedinStats.posts, label: 'Posts' },
+                stat3: { count: '2026', label: 'Joined' },
               }}
-              secondaryAction={{
-                label: 'View Repos',
-                href: `${personalInfo.github}?tab=repositories`,
-              }}
+              avatarSrc={personalInfo.linkedinStats.avatar}
+              primaryAction={{ label: 'Connect', href: personalInfo.linkedin }}
+              secondaryAction={{ label: 'Profile', href: personalInfo.linkedin }}
             />
 
             {/* Instagram Card */}
@@ -163,14 +173,8 @@ export const ContactFooter: React.FC = () => {
                 stat3: { count: personalInfo.instagramStats.following, label: 'Following' },
               }}
               avatarSrc={personalInfo.instagramStats.avatar}
-              primaryAction={{
-                label: 'Follow',
-                href: personalInfo.instagram,
-              }}
-              secondaryAction={{
-                label: 'Message',
-                href: personalInfo.instagram,
-              }}
+              primaryAction={{ label: 'Follow', href: personalInfo.instagram }}
+              secondaryAction={{ label: 'Message', href: personalInfo.instagram }}
             />
           </div>
         </div>

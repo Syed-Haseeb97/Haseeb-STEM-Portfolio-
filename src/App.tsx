@@ -9,6 +9,8 @@ import { Experience } from './components/sections/Experience';
 import { Skills } from './components/sections/Skills';
 import { ContactFooter } from './components/sections/ContactFooter';
 import { CustomCursor } from './components/ui/CustomCursor';
+import { StickyNav } from './components/ui/StickyNav';
+import { BackToTop } from './components/ui/BackToTop';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +47,8 @@ export const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-ink selection:bg-accent selection:text-paper">
       <CustomCursor />
+      <StickyNav />
+      <BackToTop />
       <Hero />
       <About />
       <Projects />

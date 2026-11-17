@@ -84,6 +84,7 @@ export const Hero: React.FC = () => {
         <div className="md:col-span-6 lg:col-span-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 font-mono text-xs tracking-wider uppercase">
           <a
             href="#projects"
+            aria-label="View selected works — 3 projects"
             className="group inline-flex items-center space-x-2 text-bone hover:text-accent transition-colors"
           >
             <span>SELECTED WORKS (03)</span>
@@ -94,6 +95,7 @@ export const Hero: React.FC = () => {
             href={personalInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Download resume PDF"
             className="inline-flex items-center text-graphite hover:text-bone transition-colors"
           >
             <span>RESUME [PDF]</span>
