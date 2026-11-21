@@ -33,7 +33,7 @@ export const ContactFooter: React.FC = () => {
       className="w-full py-16 sm:py-24 md:py-36 px-5 sm:px-8 md:px-16 lg:px-24 bg-bone text-ink"
     >
       <div className="max-w-6xl mx-auto">
-        <SectionHeader number="06" label="INQUIRIES & DOSSIER" dark={false} />
+        <SectionHeader number="07" label="INQUIRIES & DOSSIER" dark={false} />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start mb-16 md:mb-20">
           <div className="lg:col-span-8">
@@ -99,17 +99,6 @@ export const ContactFooter: React.FC = () => {
                   @haseeb.larp
                 </a>
               </div>
-              <div>
-                <span className="text-[10px] text-graphite block uppercase">LINKEDIN</span>
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-ink hover:text-accent transition-colors font-medium"
-                >
-                  Syed Haseeb Bukhari
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -143,22 +132,6 @@ export const ContactFooter: React.FC = () => {
               avatarSrc={personalInfo.githubStats.avatar}
               primaryAction={{ label: 'Follow', href: personalInfo.github }}
               secondaryAction={{ label: 'View Repos', href: `${personalInfo.github}?tab=repositories` }}
-            />
-
-            {/* LinkedIn Card */}
-            <AnimatedSocialCard
-              platform="linkedin"
-              username={personalInfo.linkedinStats.username}
-              displayName={personalInfo.linkedinStats.displayName}
-              roleOrBio={personalInfo.linkedinStats.bio}
-              stats={{
-                stat1: { count: personalInfo.linkedinStats.connections, label: 'Connections' },
-                stat2: { count: personalInfo.linkedinStats.posts, label: 'Posts' },
-                stat3: { count: '2026', label: 'Joined' },
-              }}
-              avatarSrc={personalInfo.linkedinStats.avatar}
-              primaryAction={{ label: 'Connect', href: personalInfo.linkedin }}
-              secondaryAction={{ label: 'Profile', href: personalInfo.linkedin }}
             />
 
             {/* Instagram Card */}

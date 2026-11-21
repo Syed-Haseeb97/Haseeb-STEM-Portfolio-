@@ -29,7 +29,6 @@ export const personalInfo = {
   email: 'haseebbukhari97@gmail.com',
   github: 'https://github.com/Syed-Haseeb97',
   instagram: 'https://www.instagram.com/_h4seeb._',
-  linkedin: 'https://www.linkedin.com/in/syed-haseeb-bukhari-a6a6961a8',
   resumeUrl: assetPath('assets/Haseeb_resume_latest.pdf'),
   githubStats: {
     username: 'Syed-Haseeb97',
@@ -48,14 +47,6 @@ export const personalInfo = {
     followers: '74',
     following: '114',
     avatar: assetPath('assets/insta_profile.png'),
-  },
-  linkedinStats: {
-    username: 'syed-haseeb-bukhari',
-    displayName: 'Syed Haseeb',
-    bio: 'Founding Eng @ dormy.in · IIIT Trichy CSE',
-    connections: '50+',
-    posts: '—',
-    avatar: assetPath('assets/github_profile.png'),
   },
 };
 
@@ -165,5 +156,72 @@ export const skillsData = [
   {
     group: '04 / ENGINEERING RIGOR',
     items: ['Git & Version Control', 'Web Automation (Playwright)', 'Linux & Windows Tooling', 'State Machine Architecture'],
+  },
+];
+
+export interface CertificateItem {
+  id: string;
+  number: string;
+  title: string;
+  category: string;
+  issuer: string;
+  date: string;
+  venueOrPlatform: string;
+  highlight: string;
+  verificationBadge: string;
+  signatory: string;
+  description: string;
+  skillsLearned: string[];
+  imagePreview: string;
+  downloadUrl?: string;
+  downloadLabel?: string;
+}
+
+export const certificatesData: CertificateItem[] = [
+  {
+    id: 'forge-26',
+    number: '01',
+    title: "FORGE '26 — The Gen AI Hackathon",
+    category: 'GEN AI / HACKATHON FINALIST',
+    issuer: 'NxtWave Launchpad',
+    date: '05 NOV 2026',
+    venueOrPlatform: 'National Level (30 Oct – 01 Nov 2026)',
+    highlight: 'Top 10 Finalist • Certificate of Participation',
+    verificationBadge: 'TOP 10 FINALIST',
+    signatory: 'Sashank Reddy Gujjula (Co-Founder, NxtWave)',
+    description:
+      'Awarded for building and submitting an end-to-end working Generative AI application (जनAawaz) during the nationwide FORGE ’26 Hackathon. Ranked among the Top 10 projects across India, demonstrating autonomous prompt engineering, rapid deployment, and practical builder execution.',
+    skillsLearned: [
+      'Generative AI Systems',
+      'Autonomous Agent Pipelines',
+      'Rapid Product Engineering',
+      'LLM Multimodal Tooling',
+    ],
+    imagePreview: assetPath('assets/forge_certificate.png'),
+    downloadUrl: assetPath('assets/forge_certificate.pdf'),
+    downloadLabel: 'Download Certificate PDF',
+  },
+  {
+    id: 'iit-madras-summit',
+    number: '02',
+    title: 'Dakshinapatha Summit 2.0',
+    category: 'DEEP TECH & ENTREPRENEURSHIP',
+    issuer: 'IIT Madras & Think India',
+    date: '10 – 11 OCT 2026',
+    venueOrPlatform: 'Indian Institute of Technology (IIT) Madras, Chennai',
+    highlight: 'Certificate of Appreciation',
+    verificationBadge: 'OFFICIAL RECOGNITION',
+    signatory: 'Prof. V. Kamakoti (Director, IIT Madras) & Vijay Prabhakar (National Convener, Think India)',
+    description:
+      'Conferred for active participation at the Think India Dakshinapatha Summit 2.0 at IIT Madras, under the theme "Rooted Futures: Bold Ventures — Deep Tech Entrepreneurship in the Age of Intelligence". Explored foundational intelligence, national deep-tech ventures, sovereign AI infrastructure, and frontier technology commercialization.',
+    skillsLearned: [
+      'Deep Tech Entrepreneurship',
+      'Frontier Intelligence Systems',
+      'Hardware-Software Systems',
+      'Foundational AI Architectures',
+    ],
+    imagePreview: assetPath('assets/iit_madras_summit_certificate.jpg'),
+    downloadUrl: assetPath('assets/iit_madras_summit_certificate.jpg'),
+    downloadLabel: 'View High-Res Credential',
   },
 ];

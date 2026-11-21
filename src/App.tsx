@@ -6,6 +6,7 @@ import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
 import { Experience } from './components/sections/Experience';
+import { Certificates } from './components/sections/Certificates';
 import { Skills } from './components/sections/Skills';
 import { ContactFooter } from './components/sections/ContactFooter';
 import { CustomCursor } from './components/ui/CustomCursor';
@@ -53,6 +54,7 @@ export const App: React.FC = () => {
       <About />
       <Projects />
       <Experience />
+      <Certificates />
       <Skills />
       <ContactFooter />
     </div>

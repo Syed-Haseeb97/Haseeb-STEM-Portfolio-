@@ -32,12 +32,12 @@ export const About: React.FC = () => {
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <a
-                href={personalInfo.linkedin}
+                href={personalInfo.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-1 text-ink hover:text-accent border-b border-ink/40 hover:border-accent pb-0.5 transition-colors"
               >
-                <span>LINKEDIN</span>
+                <span>INSTAGRAM</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>

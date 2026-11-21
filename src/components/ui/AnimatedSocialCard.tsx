@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface SocialCardProps {
-  platform: 'github' | 'instagram' | 'linkedin';
+  platform: 'github' | 'instagram';
   username: string;
   displayName: string;
   roleOrBio: string;
@@ -26,30 +26,21 @@ export const AnimatedSocialCard: React.FC<SocialCardProps> = ({
   secondaryAction,
 }) => {
   const isGithub = platform === 'github';
-  const isLinkedIn = platform === 'linkedin';
 
   const rotatingGradient = isGithub
     ? 'linear-gradient(transparent, #43f3ff, #8892b0, transparent)'
-    : isLinkedIn
-    ? 'linear-gradient(transparent, #0A66C2, #004182, transparent)'
     : 'linear-gradient(transparent, #f09433, #dc2743, #bc1888, transparent)';
 
   const primaryBtnColor = isGithub
     ? 'bg-[#43f3ff] text-[#111110]'
-    : isLinkedIn
-    ? 'bg-[#0A66C2] text-white'
     : 'bg-[#e1306c] text-white';
 
   const nameColor = isGithub
     ? 'text-[#43f3ff]'
-    : isLinkedIn
-    ? 'text-[#5B9BD5]'
     : 'text-[#f77737]';
 
   const statAccentColor = isGithub
     ? 'text-[#43f3ff]'
-    : isLinkedIn
-    ? 'text-[#5B9BD5]'
     : 'text-[#e1306c]';
 
   return (
