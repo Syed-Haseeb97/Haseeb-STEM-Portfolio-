@@ -120,7 +120,7 @@ export const experienceData = [
   {
     role: 'Founding Engineer',
     organization: 'dormy.in',
-    period: '2024 — Present',
+    period: '2026 — Present',
     description:
       'Spearheading core architectural decisions, full-stack product development, and automated tenant/student housing workflows for campus accommodation infrastructure.',
   },
