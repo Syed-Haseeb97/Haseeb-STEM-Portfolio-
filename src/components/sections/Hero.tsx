@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { personalInfo } from '../../data/portfolio';
-import { Scene3D } from '../canvas/Scene3D';
 import { ArrowDownRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
@@ -38,11 +37,6 @@ export const Hero: React.FC = () => {
       ref={containerRef}
       className="relative min-h-[92vh] sm:min-h-screen w-full flex flex-col justify-between pt-20 sm:pt-24 pb-8 sm:pb-12 px-5 sm:px-8 md:px-16 lg:px-24 bg-ink text-bone overflow-hidden border-b border-hairlineDark"
     >
-      {/* 3D Canvas Background / Interactive Viewport */}
-      <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-center opacity-85">
-        <Scene3D />
-      </div>
-
       {/* Top Meta Line */}
       <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-graphite border-b border-hairlineDark pb-3 sm:pb-4">
         <span>01 / FOLIO</span>
