@@ -20,10 +20,6 @@ export interface ProjectItem {
   liveUrl?: string;
   isPrivate?: boolean;
   visualPreview?: string;
-  blueprintSnippet?: {
-    label: string;
-    lines: string[];
-  };
 }
 
 export const personalInfo = {
@@ -72,19 +68,11 @@ export const projects: ProjectItem[] = [
     tagline: 'Autonomous Windows Screen & Desktop Agent',
     category: 'AGENTIC AI / PYTHON',
     description:
-      'Windows desktop agent built with PyQt6 and Gemini API. Inspects screen state with computer vision, handles local voice I/O, and executes OS-level desktop workflows via safety-governed action planners.',
+      'A Windows desktop companion featuring a fluid liquid-orb interface, multimodal vision inspection, voice I/O with Gemini API, and autonomous OS-level workflow executions via safety-governed action planners.',
     role: ['Sole Creator', 'Python Engineer', 'System Architecture'],
     technologies: ['Python', 'PyQt6', 'Gemini API', 'Playwright', 'SpeechRecognition'],
     githubUrl: 'https://github.com/Syed-Haseeb97/ai_agent',
     visualPreview: assetPath('assets/ruby-ai-assistant.svg'),
-    blueprintSnippet: {
-      label: 'ACTION PLANNER DISPATCH PIPELINE',
-      lines: [
-        'screen: captured (1920x1080 viewport context)',
-        '→ gemini-live: stream 184ms | tool_call: os.window.focus()',
-        '✓ execution: safe_planner.dispatch(action="hotkey", keys=["ctrl","shift","p"])',
-      ],
-    },
   },
   {
     id: 'mobility',
@@ -93,20 +81,12 @@ export const projects: ProjectItem[] = [
     tagline: 'Campus-First Peer-to-Peer Vehicle Marketplace',
     category: 'FULL-STACK / PRODUCT',
     description:
-      'Peer-to-peer campus vehicle marketplace for IIIT Trichy. Manages real-time vehicle reservations, telemetry-based host dashboards, dispute handling, and interactive 3D WebGL inspection models.',
+      'Campus vehicle rental ecosystem connecting student and faculty renters with vehicle owners. Engineered with zone filtering, booking scheduling, host telemetry dashboards, and 3D vehicle visualizers.',
     role: ['Full-Stack Lead', 'Frontend Architecture'],
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
     githubUrl: 'https://github.com/Syed-Haseeb97/mobility_03',
     liveUrl: 'https://mobility-03.vercel.app',
     visualPreview: assetPath('assets/mobility-marketplace.svg'),
-    blueprintSnippet: {
-      label: 'CAMPUS TELEMETRY & BOOKING PIPELINE',
-      lines: [
-        'CAMPUS ZONE: Academic Complex North & Hostels',
-        'STATUS: 18 Available • Telemetry Active • 3D Mesh Inspection',
-        'RATE: ₹35/hr • Booking Loop: Instant Student ID Verification',
-      ],
-    },
   },
   {
     id: 'dereel',
@@ -116,18 +96,10 @@ export const projects: ProjectItem[] = [
     category: 'HACKATHON WINNER / WELLBEING',
     award: '2nd Prize Winner — Hackathon',
     description:
-      'Web extension that intercepts and purges Instagram Reels feeds, Explore loops, and video recommendations from the DOM via MutationObserver pipelines while preserving direct messaging and search.',
+      'A cognitive friction tool that surgically disables short-form addictive loops and Reels on Instagram while preserving direct messaging and intentional networking utilities.',
     role: ['Ideation', 'Full-Stack Implementation'],
     technologies: ['JavaScript', 'WebExtensions API', 'DOM Mutation Engine'],
     githubUrl: 'https://github.com/Syed-Haseeb97/DeReel_instagram',
-    blueprintSnippet: {
-      label: 'DOM MUTATION INTERCEPTOR',
-      lines: [
-        'const observer = new MutationObserver(purgeAddictiveNodes);',
-        'observer.observe(document.body, { childList: true, subtree: true });',
-        '// target: /reels/ & explore nodes -> purged with zero layout shift',
-      ],
-    },
   },
   {
     id: 'kickskill',
@@ -137,18 +109,10 @@ export const projects: ProjectItem[] = [
     category: 'HACKATHON WINNER / EDTECH',
     award: '2nd Prize Winner — Hackathon',
     description:
-      'Interactive capability assessment platform built with React state trees. Evaluates student programming progression through multi-stage problem tracks and competency mastery curves.',
+      'Gamified interactive capability assessment engine designed to track progression milestones and optimize technical mastery curves with Marvel-themed narrative dynamics.',
     role: ['Frontend & Core Logic'],
     technologies: ['React', 'Interactive State Trees', 'UI Systems'],
     isPrivate: true,
-    blueprintSnippet: {
-      label: 'COMPETENCY STATE MACHINE SCHEMA',
-      lines: [
-        'state: "competency_progression" | track: "Full-Stack Systems"',
-        'milestone[4]: state_machine.transition("MASTERY_UNLOCKED")',
-        'telemetry: { completion: 94.2%, accuracy: 98.8%, tier: "Grandmaster" }',
-      ],
-    },
   },
 ];
 
